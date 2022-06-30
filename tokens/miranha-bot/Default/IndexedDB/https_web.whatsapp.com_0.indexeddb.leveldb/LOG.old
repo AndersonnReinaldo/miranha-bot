@@ -1,0 +1,12 @@
+2022/06/29-23:56:26.027 1197d Creating DB /var/www/miranha-bot/tokens/miranha-bot/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2022/06/29-23:56:26.032 1197d Reusing MANIFEST /var/www/miranha-bot/tokens/miranha-bot/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/06/29-23:56:33.769 1197f Level-0 table #5: started
+2022/06/29-23:56:33.803 1197f Level-0 table #5: 1244995 bytes OK
+2022/06/29-23:56:33.806 1197f Delete type=0 #3
+2022/06/29-23:56:52.952 1197d Level-0 table #7: started
+2022/06/29-23:56:52.987 1197d Level-0 table #7: 1082345 bytes OK
+2022/06/29-23:56:52.989 1197d Delete type=0 #4
+2022/06/29-23:56:53.813 1198f Compacting 1@1 + 1@2 files
+2022/06/29-23:56:53.870 1198f Generated table #8@1: 20639 keys, 1131667 bytes
+2022/06/29-23:56:53.870 1198f Compacted 1@1 + 1@2 files => 1131667 bytes
+2022/06/29-23:56:53.872 1198f compacted to: files[ 0 0 1 0 0 0 0 ]

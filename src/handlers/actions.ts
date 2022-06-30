@@ -1,13 +1,15 @@
-import { GroupNotification } from 'whatsapp-web.js';
+import { Whatsapp } from 'venom-bot'
+export default function Actions(client:Whatsapp){
 
-export default function Actions(message:any){
-
-    switch (message.body) {
-        case '!ping':
-            message.reply('pong');
-            break;
-        default:
-            message.reply('Nao entendi o comando');
-            break;
-    }
+    client.onMessage((message) => {
+        switch (message.body) {
+            case '!ping':
+                client.sendText(message.from,'pong');
+                break;
+            default:
+                client.sendText(message.from,'Opa, nao entendi!');
+                break;
+        }
+    })
+    
 }
