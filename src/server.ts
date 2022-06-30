@@ -1,6 +1,15 @@
 import express from "express";
 import Routes from "./routes";
+import puppeteer from 'puppeteer'
 import './services/client'
+
+(async() => {
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox','--disable-setuid-sandbox']
+      })
+})();
+
 
 const app = express();
 const PORT = process.env.PORT || 3884
