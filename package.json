@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/app.js",
+    "start": "node build/server.js",
     "dev": "nodemon",
     "docker:start": "sudo kill `sudo lsof -t -i:3306` && docker-compose up",
     "build": "rimraf ./build && tsc"
