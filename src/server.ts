@@ -1,7 +1,9 @@
 import express from "express";
 import Routes from "./routes";
 import puppeteer from 'puppeteer'
-import './services/client'
+import Sender from "./sender";
+
+const sender = new Sender();
 
 (async() => {
     const browser = await puppeteer.launch({
