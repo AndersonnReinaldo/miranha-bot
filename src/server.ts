@@ -1,23 +1,18 @@
-import express from "express";
-import Routes from "./routes";
-import puppeteer from 'puppeteer'
-import Sender from "./sender";
+import express,{ Router,Request,Response } from "express";
+import { sendMessageToDeploy } from "./handlers";
+import Sender,{ ISenderProps } from "./services/sender";
 
-const sender = new Sender();
-
-(async() => {
-    const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox','--disable-setuid-sandbox']
-      })
-})();
-
-
+const sender:ISenderProps = new Sender();
+const router  = Router()
 const app = express();
 const PORT = process.env.PORT || 3884
 
+router.post('/sendMessageToDeploy', (req:Request, res:Response) => {
+    return sendMessageToDeploy(req, res, sender);
+})
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(Routes);
+app.use(router);
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT} 🚀`));    
