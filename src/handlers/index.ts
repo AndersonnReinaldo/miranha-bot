@@ -1,5 +1,6 @@
-import { sendMessageToDeploy } from './HandlerSendMessage'
+import { sendMessageToDeploy,sendProcessMessage } from './HandlerSendMessage'
 
 export {
-    sendMessageToDeploy
+    sendMessageToDeploy,
+    sendProcessMessage
 }
